@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+    <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+        android:id="@+id/spinner_pipe"
+        android:spinnerMode="dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:smsp_itemSize="@dimen/_20sdp"
+        android:paddingLeft="@dimen/_20sdp"
+        app:smsp_enableFloatingLabel="false"
+        app:smsp_hint="Select Pipe Type"
+        app:smsp_hintSize="@dimen/_15sdp"
+        app:smsp_arrowSize="@dimen/_10sdp"
+        app:smsp_hintColor="#116B0B"
+        app:smsp_itemColor="#000000"
+        app:smsp_itemListColor="#000000"
+        app:smsp_itemListHintBackgroundColor="#808080"
+        app:smsp_itemListHintColor="#FFFFFF"
+        app:smsp_multilineError="false"
+        app:smsp_selectedItemListColor="#FF5252"
+        />
+
+    <com.chivorn.smartmaterialspinner.SmartMaterialSpinner
+        android:id="@+id/spinner_size"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:spinnerMode="dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:smsp_itemSize="@dimen/_20sdp"
+        android:paddingLeft="@dimen/_20sdp"
+        app:smsp_enableFloatingLabel="false"
+        app:smsp_hint="Select Pipe Size"
+        app:smsp_hintSize="@dimen/_15sdp"
+        app:smsp_arrowSize="@dimen/_10sdp"
+        app:smsp_hintColor="#116B0B"
+        app:smsp_itemColor="#000000"
+        app:smsp_itemListColor="#000000"
+        app:smsp_itemListHintBackgroundColor="#808080"
+        app:smsp_itemListHintColor="#FFFFFF"
+        app:smsp_multilineError="false"
+        app:smsp_selectedItemListColor="#FF5252"
+        />
+
+        <Button
+            android:id="@+id/btnGo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Go"
+            android:visibility="gone"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:textSize="@dimen/_20sdp"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_btn"
+            />
+    </LinearLayout>
+
+</RelativeLayout>
