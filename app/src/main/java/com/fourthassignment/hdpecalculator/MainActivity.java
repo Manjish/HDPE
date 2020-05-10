@@ -182,7 +182,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         switch(view.getId()){
             case R.id.btnGo:
-                Intent intent = new Intent(this,Calculator.class);
+                Intent intent = new Intent(this,TabbedActivity.class);
                 intent.putExtra("pipe",spPipe.getSelectedItem().toString());
                 intent.putExtra("size",spSize.getSelectedItem().toString());
                 startActivity(intent);

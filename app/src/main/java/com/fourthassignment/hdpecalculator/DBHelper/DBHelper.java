@@ -47,6 +47,19 @@ null,
         );
     }
 
+    public String getUnitWeight(String pressure,String size, SQLiteDatabase db){
+        db = this.getWritableDatabase();
+        String query = "SELECT " + COLUMN_PRICE + " FROM " + TABLE_RATE + " WHERE " +
+                COLUMN_PRESSURE + " = \"" + pressure + "\" AND " +
+                COLUMN_SIZE + " = \"" +size+ "\"";
+        Cursor cursor = db.rawQuery(query, null);
+        String unitWeight="unitWeight";
+        if (cursor.moveToFirst()) {
+            unitWeight = cursor.getString(0);
+        }
+        return unitWeight;
+    }
+
     private void insertPrice(SQLiteDatabase db) {
         String query =
                 "INSERT INTO " + TABLE_RATE + "(" + COLUMN_PRESSURE +
